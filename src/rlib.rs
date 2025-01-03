@@ -44,8 +44,8 @@ pub fn get_input() -> Command {
 pub fn update_state(command: &Command) -> String {
     let output: String;
  
-    match command {
-        Command::Look(_) => output = format!("It's too dark to see."),
+    match command {        
+        Command::Look(_) => output = format!("It is very dark, you can see nothing but the flashing light.")
         Command::Go(_) => output = format!("It is too dark to move."),
         Command::Quit => output = format!("Quitting.\nThank you for playing!"),
         Command::Unknown(input_str) => output = format!("I don't know how to '{}'.", input_str),
